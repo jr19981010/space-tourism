@@ -1,5 +1,5 @@
+import React from "react";
 import myImage from "../../../assets/technology/image-launch-vehicle-portrait.jpg"
-
 import { fetchTechnology } from "../../../localData"
 
 export default function LaunchVehicle(){

@@ -1,3 +1,4 @@
+import React from "react";
 import myImage from "../../../assets/technology/image-spaceport-portrait.jpg"
 
 import { fetchTechnology } from "../../../localData"

@@ -1,7 +1,5 @@
-import Home from './pages/Home';
-import Destination from './pages/Destination';
-import Crew from './pages/crew';
-import Technology from './pages/Technology';
+import React from 'react';
+import Index from './pages/Index';
 // import './App.css';
 
 
@@ -9,8 +7,7 @@ import Technology from './pages/Technology';
 function App() {
   return (
     <>
-  <Technology />
-
+  <Index />
     </>
   );
 }

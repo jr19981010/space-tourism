@@ -1,3 +1,4 @@
+import React from "react";
 import {fetchDestination} from "../../../localData"
 import myImage from "../../../../src/assets/destination/image-moon.png"
 export default function Moon(){

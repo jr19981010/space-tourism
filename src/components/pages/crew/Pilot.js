@@ -1,3 +1,4 @@
+import React from "react";
 import { fetchCrew } from "../../../localData"
 import myImage from "../../../assets/crew/image-victor-glover.png"
 
