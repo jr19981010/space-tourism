@@ -1,11 +1,13 @@
 import React from "react";
-import Section from "../components/pages/home/Section";
-import Aside from "../components/pages/home/Aside";
+import Article from "../components/pages/home/Article";
+import './Home.css';
 export default function Home(){
     return(
         <>
-        <Section />
-        <Aside />
+        <div className="block-home">
+        </div>
+        <Article />
         </>
+        
     )
 }

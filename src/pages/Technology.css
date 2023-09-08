@@ -1,0 +1,165 @@
+.block-technology{
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article.technology-container{
+    position: relative;
+    top: clamp(3rem, 4vw, 6.25rem);
+}
+
+article.technology-container section.technology{
+    display: grid;
+    grid-template-columns: minmax(4rem, 6.25rem) minmax(15.625rem,28.125rem) minmax(25rem,28.125rem);
+    grid-template-rows:minmax(2rem, 3.125rem) 3.125rem minmax(auto, 9.375rem)  minmax(auto, .2fr);
+    column-gap: clamp(0.625px, 4vw, 6.25rem);
+    width: 70%;
+    margin: auto;
+}
+@media screen and (max-width: 100rem) {
+    article.technology-container section.technology{
+        width: 85%;
+    }  
+}
+
+@media screen and (max-width: 73.125rem) {
+    article.technology-container section.technology{
+        width: 95%;
+        column-gap: 0.625rem;
+    }  
+}
+
+
+article.technology-container section.technology h1{
+    font-size:clamp(1.25rem, 4vw, 1.875rem);
+    grid-column: 1 / 4  ;
+    grid-row: 1 / 2;
+    align-self: center;
+    text-align: start;
+}
+
+article.technology-container section.technology h2{
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    align-self: center;
+}
+@media screen and (max-width: 73.125rem) {
+    article.technology-container section.technology h2{
+        grid-column: 2 / 3;
+    }
+}
+
+article.technology-container section.technology img{
+    grid-column: 3;
+    grid-row: 2 / 6;
+    margin: auto;
+    border-radius: 0.313rem;
+    align-self: center;
+}
+
+article.technology-container section.technology p{
+    grid-column: 2 / 3;
+    grid-row: 4  / 5;
+    align-self: center;
+    text-align: justify;
+}
+article.technology-container section.technology div.technology-carousel-indicator{
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+article.technology-container section.technology div.technology-carousel-indicator button{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: clamp(3.125rem, 4vw, 4.375rem);
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    border: 0.063rem solid rgba(255, 255, 255, .3);
+    align-self: center;
+    margin: 0.625rem;
+}
+
+article.technology-container section.technology div.technology-carousel-indicator button.active{
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 49.375rem) {
+        article.technology-container section.technology{
+            grid-template-columns: 1fr;
+            grid-template-rows:2.125rem  4rem repeat(5, minmax(auto, .3fr));
+            column-gap: 0;
+            row-gap: 0.938rem;
+            text-align: center;
+        }
+        article.crew-container section.crew h1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            align-self: center;
+        }
+        article.technology-container section.technology div.technology-carousel-indicator{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            display: flex;
+            align-self: center;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        article.technology-container section.technology div.technology-carousel-indicator button{
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 0.938rem;
+            align-self: center;
+            text-align: center;
+            margin: 0.625rem;
+            
+        }
+        article.technology-container section.technology img{
+            grid-column: 1 / 2;
+            grid-row: 3 / 5;
+            border-radius: 0.313rem;
+            align-self: center;
+            width: 21.875rem;
+        }
+        article.technology-container section.technology h2{
+            grid-column: 1 / 2;
+            grid-row: 6;
+            position: relative;
+            display: flex;
+            text-align: center;
+            justify-content: center;    
+        }
+        article.technology-container section.technology h2 span{
+            position: absolute;
+            top: 1.563rem;
+        }    
+        article.technology-container section.technology p{
+            grid-column: 1 / 2;
+            grid-row: 7;
+            align-self: center;
+            text-align: justify;
+            width: 80%;
+            margin-inline: auto;
+            margin-bottom: 1.25rem;
+        }        
+}
+
+@media screen and (max-width: 40.625rem) {
+    
+    article.technology-container{
+        top: .5rem;
+    }
+    
+}

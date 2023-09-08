@@ -7,12 +7,13 @@ export default function Commander(){
     const commander = fetchCrew("Douglas Hurley");
 
     return(
-        <article>
-        <h2>
-            <span>{commander.role}</span>{commander.name}
+        <>
+        <h2 className="text-white ff-serif fs-700 uppercase">
+            <span className="text-accent fs-600">{commander.role}</span><br/>{commander.name}
         </h2>
-        <p>{commander.bio}</p>
-        <img src={myImage} alt={commander.name}/>
-        </article>
+        <p className="text-accent ff-sans-normal">{commander.bio}</p>
+        <img className="commander"  src={myImage} alt={commander.name} loading="lazy"/>
+        </>
     )
 }
+// width={494.469} height={673.391}

@@ -7,12 +7,12 @@ export default function Pilot(){
     const pilot = fetchCrew("Victor Glover");
 
     return(
-        <article>
-        <h2>
-            <span>{pilot.role}</span>{pilot.name}
+        <>
+        <h2 className="text-white ff-serif fs-700 uppercase">
+            <span className="text-accent fs-600">{pilot.role}</span><br/>{pilot.name}
         </h2>
-        <p>{pilot.bio}</p>
-        <img src={myImage} alt={pilot.name}/>
-        </article>
+        <p className="text-accent ff-sans-normal">{pilot.bio}</p>
+        <img className="pilot" src={myImage} alt={pilot.name} loading="lazy"/>
+        </>
     )
 }

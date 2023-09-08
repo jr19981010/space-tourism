@@ -7,12 +7,12 @@ export default function FlightEngineer(){
     const flightEngineer = fetchCrew("Anousheh Ansari");
 
     return(
-        <article>
-        <h2>
-            <span>{flightEngineer.role}</span>{flightEngineer.name}
+        <>
+        <h2 className="text-white ff-serif fs-700 uppercase">
+            <span className="text-accent fs-600">{flightEngineer.role}</span><br/>{flightEngineer.name}
         </h2>
-        <p>{flightEngineer.bio}</p>
-        <img src={myImage} alt={flightEngineer.name}/>
-        </article>
+        <p className="text-accent ff-sans-normal">{flightEngineer.bio}</p>
+        <img className="flight-engineer" src={myImage} alt={flightEngineer.name} loading="lazy"/>
+        </>
     )
 }

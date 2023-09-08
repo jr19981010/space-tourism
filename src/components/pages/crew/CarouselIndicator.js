@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import Commander from "./Commander";
 import MissionSpecialist from "./MissionSpecialist";
 import Pilot from "./Pilot";
 import FlightEngineer from "./FlightEngineer";
-export default function CarouselIndicator(){
+import {indicator} from "../../../functions";
+export default function CarouselIndicator({handleDisplay, currentDisplay}) {
 
-        const [display, setDisplay] = useState(<Commander />);
+
+        indicator("div.crew-carousel-indicator button", "active")
 
 
-    return(
+    return (
         <>
-            {display}
-
-        <button onClick={() => setDisplay(<Commander />)}>1</button>
-        <button onClick={() => setDisplay(<MissionSpecialist />)}>2</button>
-        <button onClick={() => setDisplay(<Pilot/>)}>3</button>
-        <button onClick={() => setDisplay(<FlightEngineer />)}>4</button>
-        
+            {currentDisplay}
+            <div className="crew-carousel-indicator">
+                <button className={ currentDisplay.type === Commander ? "active" : "" } onClick={() => handleDisplay(<Commander />)}></button>
+                <button className={ currentDisplay.type === MissionSpecialist ? "active" : "" } onClick={() => handleDisplay(<MissionSpecialist />)}></button>
+                <button className={ currentDisplay.type === Pilot ? "active" : "" } onClick={() => handleDisplay(<Pilot />)}></button>
+                <button className={ currentDisplay.type === FlightEngineer ? "active" : "" } onClick={() => handleDisplay(<FlightEngineer />)}></button>
+            </div>
         </>
     )
 }

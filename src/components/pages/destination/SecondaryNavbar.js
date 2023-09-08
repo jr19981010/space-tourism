@@ -1,37 +1,35 @@
 import React from "react";
-import { useState } from "react";
 import Moon from "./Moon";
 import Europa from "./Europa";
 import Titan from "./Titan";
 import Mars from "./Mars";
+import { indicator } from "../../../functions";
 
+export default function SecondaryNavBar({ handleDisplay, currentDisplay }) {
 
-export default function SecondaryNavBar(){
+    indicator("nav.desti-Nav ul li", "active");
 
-    const [display, SetDisplay] = useState(<Moon />);
+  return (
+    <>
 
-    return(
-        <>
-        <nav>
-        <ul>
-             <li>
-                <button onClick={() => SetDisplay(<Moon />)}>Moon</button>
-            </li>
-            <li>
-            <button onClick={ () => SetDisplay(<Mars />)}>Mars</button>
-            </li>
-            <li>
-            <button onClick={ () => SetDisplay(<Titan />)}>Titan</button>
-            </li>
-            <li>
-            <button onClick={ () => SetDisplay(<Europa />)}>Europa</button>
-            </li>
+      <nav className="desti-Nav">
+        <ul className="text-accent ff-sans-cond uppercase letter-spacing-1">
+          <li className={currentDisplay.type === Moon ? "active" : ""} onClick={() => handleDisplay(<Moon />)}>
+            Moon
+          </li>
+          <li className={currentDisplay.type === Mars ? "active" : ""} onClick={() => handleDisplay(<Mars />)}>
+            Mars
+          </li>
+          <li className={currentDisplay.type === Titan ? "active" : ""} onClick={() => handleDisplay(<Titan />)}>
+            Titan
+          </li>
+          <li className={currentDisplay.type === Europa ? "active" : ""} onClick={() => handleDisplay(<Europa />)}>
+            Europa
+          </li>
         </ul>
-    </nav>
+      </nav>
 
-        {display}
-        </>
-
-
-    )
+          {currentDisplay}
+    </>
+  );
 }

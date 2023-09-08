@@ -1,18 +1,22 @@
-import React,{ useState } from "react";
-import LaunchVehicle from "./LaunchVehicle"; 
+import React from "react";
+import LaunchVehicle from "./LaunchVehicle";
 import SpaceCapsule from "./SpaceCapsule";
 import Spaceport from "./Spaceport";
-export default function CarouselIndicator(){
+import {indicator} from "../../../functions";
+export default function CarouselIndicator({handleDisplay, currentDisplay}) {
 
-    const [display, setDisplay] =useState(<LaunchVehicle />);
 
-    return(
+        indicator("div.technology-carousel-indicator button", "active");
+
+    return (
         <>
-        {display}
-        <button onClick={() => setDisplay(<LaunchVehicle />)}>1</button>
-        <button onClick={() => setDisplay(<SpaceCapsule />)}>2</button>
-        <button onClick={() => setDisplay(<Spaceport />)}>3</button>
-        
+            {currentDisplay}
+            <div className="technology-carousel-indicator">
+                <button className={` ${currentDisplay.type === LaunchVehicle ? "active" : ""} ff-serif fs-500`} onClick={() => handleDisplay(<LaunchVehicle />)}>1</button>
+                <button className={`${currentDisplay.type === SpaceCapsule ? "active" : ""}  ff-serif fs-500`} onClick={() => handleDisplay(<SpaceCapsule />)}>2</button>
+                <button className={`${currentDisplay.type === Spaceport ? "active" : ""} ff-serif fs-500`} onClick={() => handleDisplay(<Spaceport />)}>3</button>
+            </div>
         </>
     )
 }
+

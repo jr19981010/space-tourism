@@ -6,15 +6,15 @@ import { fetchTechnology } from "../../../localData"
 export default function SpaceCapsule(){
     const spaceCapsule =fetchTechnology("Space capsule");
     return(    
-    <article>
-        <h2>
-            <span>The terminology...</span>
+        <>
+        <h2 className="text-white ff-serif fs-700 uppercase">
+            <span className="text-white ff-sans-normal fs-200 uppercase letter-spacing-3">The terminology...</span><br/>
             {spaceCapsule.name}
         </h2>
-        <p>
+        <p className="text-accent ff-sans-normal">
             {spaceCapsule.description}
         </p>
-        <img src={myImage} alt={spaceCapsule.name}/>
-    </article>
+        <img src={myImage} alt={spaceCapsule.name} loading="lazy"/>
+    </>
 )
 }
