@@ -14,7 +14,7 @@ export default function Spaceport(){
         <p className="text-accent ff-sans-normal">
             {spaceport.description}
         </p>
-        <img src={myImage} alt={spaceport.name} loading="lazy"/>
+        <img className="fade-in" src={myImage} alt={spaceport.name} loading="lazy"/>
     </>
 )
 }

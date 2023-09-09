@@ -10,7 +10,7 @@ export default function Titan({handler}){
     return(
         <>
             <h2 className="ff-serif fs-800 uppercase">{titanData.name}</h2>
-            <img src={myImage} alt={titanData.name} loading="lazy" {...handler}/>
+            <img className="fade-in" src={myImage} alt={titanData.name} loading="lazy" {...handler}/>
             <p className="text-accent ff-sans-normal">{titanData.description}</p>
 
             <dl className="grid">

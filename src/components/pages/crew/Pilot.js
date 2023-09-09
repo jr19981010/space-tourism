@@ -12,7 +12,7 @@ export default function Pilot(){
             <span className="text-accent fs-600">{pilot.role}</span><br/>{pilot.name}
         </h2>
         <p className="text-accent ff-sans-normal">{pilot.bio}</p>
-        <img className="pilot" src={myImage} alt={pilot.name} loading="lazy"/>
+        <img className="pilot fade-in" src={myImage} alt={pilot.name} loading="lazy"/>
         </>
     )
 }

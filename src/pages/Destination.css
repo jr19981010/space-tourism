@@ -66,7 +66,19 @@ article.destination-container section.destination h2{
      font-size: 5rem;
     }
 }
-
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
 article.destination-container section.destination img{
     grid-column: 1 / 2;
     /* grid-row: ; */

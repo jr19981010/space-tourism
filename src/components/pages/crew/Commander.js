@@ -12,7 +12,7 @@ export default function Commander(){
             <span className="text-accent fs-600">{commander.role}</span><br/>{commander.name}
         </h2>
         <p className="text-accent ff-sans-normal">{commander.bio}</p>
-        <img className="commander"  src={myImage} alt={commander.name} loading="lazy"/>
+        <img className="commander fade-in"  src={myImage} alt={commander.name} loading="lazy"/>
         </>
     )
 }

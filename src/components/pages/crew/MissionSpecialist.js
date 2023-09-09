@@ -12,7 +12,7 @@ export default function MissionSpecialist(){
             <span className="text-accent fs-600">{missionSpecialist.role}</span><br/>{missionSpecialist.name}
         </h2>
         <p className="text-accent ff-sans-normal">{missionSpecialist.bio}</p>
-        <img className="mission-specialist" src={myImage} alt={missionSpecialist.name} loading="lazy"/>
+        <img className="mission-specialist fade-in" src={myImage} alt={missionSpecialist.name} loading="lazy"/>
         </>
     )
 }

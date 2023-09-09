@@ -13,7 +13,7 @@ export default function LaunchVehicle(){
         <p className="text-accent ff-sans-normal">
             {launchVehicle.description}
         </p>
-        <img src={myImage} alt={launchVehicle.name} loading="lazy"/>
+        <img className="fade-in" src={myImage} alt={launchVehicle.name} loading="lazy"/>
     </>
 )
 }

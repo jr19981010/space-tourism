@@ -14,7 +14,7 @@ export default function SpaceCapsule(){
         <p className="text-accent ff-sans-normal">
             {spaceCapsule.description}
         </p>
-        <img src={myImage} alt={spaceCapsule.name} loading="lazy"/>
+        <img className="fade-in" src={myImage} alt={spaceCapsule.name} loading="lazy"/>
     </>
 )
 }

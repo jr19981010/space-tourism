@@ -9,7 +9,7 @@ export default function Mars({handler}){
     return(
         <>
             <h2 className="ff-serif fs-800 uppercase">{marsData.name}</h2>
-            <img src={myImage} alt={marsData.name} loading="lazy" {...handler}/>
+            <img className="fade-in" src={myImage} alt={marsData.name} loading="lazy" {...handler}/>
             <p className="text-accent ff-sans-normal">{marsData.description}</p>
 
             <dl className="grid">

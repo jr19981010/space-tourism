@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Heading from "../components/pages/crew/Heading";
 import CarouselIndicator from "../components/pages/crew/CarouselIndicator";
@@ -7,7 +7,6 @@ import Commander from "../components/pages/crew/Commander";
 import MissionSpecialist from "../components/pages/crew/MissionSpecialist";
 import Pilot from "../components/pages/crew/Pilot";
 import FlightEngineer from "../components/pages/crew/FlightEngineer";
-import { hasUnreliableEmptyValue } from "@testing-library/user-event/dist/utils";
 export default function Crew(){
 
 const displayArray = [<Commander />, <MissionSpecialist />, <Pilot />, <FlightEngineer />]

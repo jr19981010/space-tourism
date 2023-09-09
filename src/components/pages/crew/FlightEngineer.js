@@ -12,7 +12,7 @@ export default function FlightEngineer(){
             <span className="text-accent fs-600">{flightEngineer.role}</span><br/>{flightEngineer.name}
         </h2>
         <p className="text-accent ff-sans-normal">{flightEngineer.bio}</p>
-        <img className="flight-engineer" src={myImage} alt={flightEngineer.name} loading="lazy"/>
+        <img className="flight-engineer fade-in" src={myImage} alt={flightEngineer.name} loading="lazy"/>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Heading from "../components/pages/destination/heading";

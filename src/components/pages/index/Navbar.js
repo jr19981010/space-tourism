@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect  } from "react";
 import Home from "../../../pages/Home";
 import Destination from "../../../pages/Destination";
 import Crew from "../../../pages/Crew";
@@ -6,11 +6,13 @@ import Technology from "../../../pages/Technology";
 import './Navbar.css';
 import myImage from "../../../logo.svg";
 import { indicator, menuCtrl } from "../../../functions";
-
+import { useDisplay } from "../../../DisplayContext";
 
 export default function Navbar() {
 
-    const [display, SetDisplay] = useState(<Home />);
+
+    const { newdisplay, changeDisplay } = useDisplay();
+
 
     useEffect(() =>{
         indicator("nav.navbarnav ul li", "active");
@@ -30,7 +32,8 @@ export default function Navbar() {
                 document.querySelector("nav.navbarnav ul").classList.add("hide");
             })
         })
-    },[display])
+    },[newdisplay]);
+
     
     return (
         <>
@@ -39,25 +42,25 @@ export default function Navbar() {
                     <img className="logo" src={myImage} alt="logo" />
                     <div className="line"></div>
                     <ul className="text-white letter-spacing-2 show">
-                        <li className="active ff-sans-cond letter-spacing-1 text-accent" onClick={() => SetDisplay(<Home />)}>
+                        <li className={`${newdisplay === "Home" ? "active" : ""} ff-sans-cond letter-spacing-1 text-accent`} onClick={() => changeDisplay("Home")}>
 
                             <span className="text-white">00</span>
                             HOME
 
                         </li>
-                        <li className="ff-sans-cond letter-spacing-1 text-accent" onClick={() => SetDisplay(<Destination />)}>
+                        <li className={`${newdisplay === "Destination" ? "active" : ""} ff-sans-cond letter-spacing-1 text-accent`} onClick={() => changeDisplay("Destination")}>
 
                             <span className="text-white">01</span>
                             DESTINATION
 
                         </li>
-                        <li className="ff-sans-cond letter-spacing-1 text-accent" onClick={() => SetDisplay(<Crew />)}>
+                        <li className={`${newdisplay === "Crew" ? "active" : ""} ff-sans-cond letter-spacing-1 text-accent`} onClick={() => changeDisplay("Crew")}>
 
                             <span className="text-white">02</span>
                             CREW
 
                         </li>
-                        <li className="ff-sans-cond letter-spacing-1 text-accent" onClick={() => SetDisplay(<Technology />)}>
+                        <li className={`${newdisplay === "Technology" ? "active" : ""} ff-sans-cond letter-spacing-1 text-accent`} onClick={() => changeDisplay("Technology")}>
 
                             <span className="text-white">03</span>
                             TECHNOLOGY
@@ -67,7 +70,10 @@ export default function Navbar() {
                 </nav>
 
             </header>
-            {display}
+            {newdisplay === "Home" && <Home />}
+            {newdisplay === "Destination" && <Destination />}
+            {newdisplay === "Crew" && <Crew />}
+            {newdisplay === "Technology" && <Technology />}
         </>
     )
 }

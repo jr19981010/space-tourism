@@ -10,7 +10,7 @@ export default function Moon(){
     return(
         <>
             <h2 className="ff-serif fs-800 uppercase">{moonData.name}</h2>
-            <img src={myImage} alt={moonData.name} loading="lazy"/>
+            <img className="fade-in" src={myImage} alt={moonData.name} loading="lazy"/>
             <p className="text-accent ff-sans-normal">{moonData.description}</p>
 
             <dl className="grid">
